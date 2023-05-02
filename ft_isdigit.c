@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloke <sloke@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/02 12:48:57 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/02 15:30:11 by sloke            ###   ########.fr       */
+/*   Created: 2023/05/02 14:58:54 by sloke             #+#    #+#             */
+/*   Updated: 2023/05/02 15:31:02 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <unistd.h>
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
+}
+/*
+int	main()
+{
+	int	input1 = '5';
+	int	input2 = 'a';
+	int	input3 = '7';
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-
-#endif
+	printf("%d", ft_isdigit(input1));
+	printf("%d", ft_isdigit(input2));
+	printf("%d", ft_isdigit(input3));
+	return (0);
+}*/
