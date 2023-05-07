@@ -6,26 +6,26 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:50:59 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/03 14:43:50 by sloke            ###   ########.fr       */
+/*   Updated: 2023/05/07 12:46:57 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	unsigned char	*pos;
+	unsigned char	*new;
 
-	pos = (unsigned char *)str;
+	new = (unsigned char *)str;
 	while (n--)
-		*pos++ = (unsigned char)c;
+		*new++ = (unsigned char)c;
 	return (str);
 }
 
 /*int	main(void)
 {
 	char	hot[] = "hello why is it so hot";
-	printf("%s", memset(hot, '4', 5));
+	printf("%s", ft_memset(hot, '4', 5));
 	return (0);
 }*/
 
