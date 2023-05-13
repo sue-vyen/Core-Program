@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 12:32:22 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/13 13:51:34 by sloke            ###   ########.fr       */
+/*   Created: 2023/05/13 13:52:01 by sloke             #+#    #+#             */
+/*   Updated: 2023/05/13 15:24:16 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strchr(const char *str, int c)
 {
-	if (c >= 97 && c <= 122)
-			c = c - 32;
-	else
-		return (c);
-	return (c);
+	int	pos;
+
+	pos = 0;
+	while (str[pos])
+	{
+		if (str[pos] == c)
+			return ((char *)str + pos);
+		pos++;
+	}
+	return (0);
 }
 
 // int	main()
 // {
-// 	char	rawr = 'e';
-// 	char	meow = 'Y';
+// 	char str[] = "abcdefghijklnmopqrstuvwxyz";
 
-// 	printf("%c", ft_toupper(rawr));
-// 	printf("%c", ft_toupper(meow));
+// 	printf("%s\n", ft_strchr(str, '/'));
 // 	return (0);
 // }
+
+/* 
+1st arg = str to be searched
+2nd arv = character to be searched in str
+returns = pointer OR \0
+stops the moment char is found OR str = \0
+*/
