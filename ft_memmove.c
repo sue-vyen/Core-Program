@@ -6,12 +6,11 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:48:34 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/12 11:00:11 by sloke            ###   ########.fr       */
+/*   Updated: 2023/05/13 13:28:56 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
