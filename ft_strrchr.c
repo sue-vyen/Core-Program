@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 15:25:32 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/13 17:08:41 by sloke            ###   ########.fr       */
+/*   Updated: 2023/05/19 10:13:50 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strrchr(const char *str, int c)
 
 // int	main()
 // {
-// 	char str[] = "abcdefghijklnmopqrstuvwxyz";
+// 	char str[] = "abcxdefghijklnmopqrstuvwxyz";
 
 // 	printf("%s\n", ft_strrchr(str, 'x'));
 // 	return (0);
