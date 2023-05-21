@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 13:31:02 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/19 15:44:18 by sloke            ###   ########.fr       */
+/*   Updated: 2023/05/21 15:39:45 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 size_t	ft_strlen(const char *c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
