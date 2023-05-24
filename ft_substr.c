@@ -1,48 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 14:59:50 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/24 14:46:24 by sloke            ###   ########.fr       */
+/*   Created: 2023/05/24 13:28:23 by sloke             #+#    #+#             */
+/*   Updated: 2023/05/24 14:58:04 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		count;
-	char	*new_str;
-	int		i;
+	unsigned int		i;
+	unsigned int		j;
+	char				*substr;
 
-	count = 0;
 	i = 0;
-	while (str[count])
-		count++;
-	new_str = malloc(count + 1);
-	if (new_str == NULL)
+	j = 0;
+	substr = malloc(len + 1);
+	if (start <= 0 || ft_strlen(s) < start)
 		return (NULL);
-	while (i < count)
+	while (s[i])
 	{
-		new_str[i] = str[i];
+		if (i == start)
+		{
+			while (j < len)
+			{
+				substr[j] = s[i];
+				j++;
+				i++;
+			}
+		}
 		i++;
 	}
-	new_str[i] = '\0';
-	return (new_str);
+	substr[i] = '\0';
+	return (substr);
 }
 
 // int	main(void)
 // {
-// 	const char	*original = "Hello";
-// 	char		*duplicate = ft_strdup(original);
+// 	const char		*original;
 
-// 	if (duplicate != NULL)
-// 	{
-// 		printf("%s\n", original);
-// 		printf("%s\n", duplicate);
-// 	}
+// 	original = "Hello people, I'm surviving ";
+// 	printf("%s\n", ft_substr(original, 6, 6));
 // 	return (0);
 // }
