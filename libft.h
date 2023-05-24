@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 13:31:02 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/23 14:37:00 by sloke            ###   ########.fr       */
+/*   Updated: 2023/05/24 10:36:52 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void	*ft_calloc(size_t num_elements, size_t element_size);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
+char	*ft_strdup(const char *str);
 
 #endif
