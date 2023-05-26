@@ -1,50 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 13:28:23 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/26 10:31:12 by sloke            ###   ########.fr       */
+/*   Created: 2023/05/26 10:31:49 by sloke             #+#    #+#             */
+/*   Updated: 2023/05/26 15:48:49 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int		i;
-	unsigned int		j;
-	char				*substr;
+	int		i;
+	char	*result;
 
 	i = 0;
-	j = 0;
-	substr = malloc(len + 1);
-	if (start <= 0 || ft_strlen(s) < start)
+	result = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (result == NULL)
 		return (NULL);
-	while (s[i])
+	while (*s1)
 	{
-		if (i == start)
-		{
-			while (j < len)
-			{
-				substr[j] = s[i];
-				j++;
-				i++;
-			}
-		}
-		i++;
+		result[i] = *s1;
+		++i;
+		++s1;
 	}
-	substr[i] = '\0';
-	return (substr);
+	while (*s2)
+	{
+		result[i] = *s2;
+		++i;
+		++s2;
+	}
+	result[i] = '\0';
+	return (result);
 }
 
 // int	main(void)
 // {
-// 	const char		*original;
+// 	char	*prefix = "godo";
+// 	char	*suffix = " turkey";
 
-// 	original = "Hello people, I'm surviving ";
-// 	printf("%s\n", ft_substr(original, 6, 6));
+// 	printf("%s\n",ft_strjoin(prefix, suffix));
 // 	return (0);
 // }
