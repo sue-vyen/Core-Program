@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 15:52:18 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/29 14:33:52 by sloke            ###   ########.fr       */
+/*   Updated: 2023/05/29 15:37:07 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main(void)
 // {
-// 	char	*str = "from the beginning and the end of the string";
+// 	char	*str = "the from the beginning and the end of the string the";
 // 	char	*trim = "the";
 // 	char	*result = ft_strtrim(str, trim);
 
