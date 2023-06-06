@@ -6,7 +6,7 @@
 #    By: sloke <sloke@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/29 14:51:08 by sloke             #+#    #+#              #
-#    Updated: 2023/06/06 10:26:11 by sloke            ###   ########.fr        #
+#    Updated: 2023/06/06 11:05:31 by sloke            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,7 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 
 OBJS = $(SRCS:.c=.o)
 
-# B_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-#                 ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-#                 ft_lstmap.c
+B_SRCS = ft_lstnew.c \
 
 B_OBJS = $(B_SRCS:.c=.o)
 
@@ -39,8 +37,8 @@ $(NAME): $(OBJS)
 $(OBJS): %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# bonus: $(NAME) $(B_OBJS)
-#         ar rcs $(NAME) $(B_OBJS)
+bonus: $(NAME) $(B_OBJS)
+	ar rcs $(NAME) $(B_OBJS)
 
 clean:
 	rm -f $(OBJS) $(B_OBJS)
