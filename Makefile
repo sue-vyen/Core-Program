@@ -6,7 +6,7 @@
 #    By: sloke <sloke@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/29 14:51:08 by sloke             #+#    #+#              #
-#    Updated: 2023/06/06 11:54:50 by sloke            ###   ########.fr        #
+#    Updated: 2023/06/06 15:39:05 by sloke            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 
 OBJS = $(SRCS:.c=.o)
 
-B_SRCS = ft_lstnew.c ft_lstadd_front.c \
+B_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 
 B_OBJS = $(B_SRCS:.c=.o)
 
