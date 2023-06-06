@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 13:31:02 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/06 09:55:36 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/06 10:12:12 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t num_elements, size_t element_size);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
