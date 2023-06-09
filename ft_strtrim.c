@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 15:52:18 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/29 15:37:07 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/09 09:46:06 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*result;
 
-	start = 0;
-	end = ft_strlen(s1);
 	if (s1 == NULL || set == NULL)
 		return (NULL);
+	start = 0;
+	end = ft_strlen(s1);
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	while (end > start && ft_strrchr(set, s1[end - 1]))

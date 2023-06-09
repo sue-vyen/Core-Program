@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:28:23 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/29 14:13:52 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/09 09:43:29 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,26 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int		i;
-	unsigned int		j;
-	char				*substr;
+	size_t	i;
+	char	*substr;
 
 	i = 0;
-	j = 0;
-	substr = malloc(len + 1);
-	if (start < 0 || ft_strlen(s) < start)
+	if (s == NULL)
 		return (NULL);
-	while (s[i])
+	substr = malloc(sizeof(char) * len + 1);
+	if (substr == NULL)
+		return (NULL);
+	if (start < 0 || ft_strlen(s) < start)
+		return (ft_strdup(""));
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
+	if (start <= len)
 	{
-		if (i == start)
+		while (i < len)
 		{
-			while (j < len)
-			{
-				substr[j] = s[i];
-				j++;
-				i++;
-			}
+				substr[i] = s[start + i];
+				++i;
 		}
-		i++;
 	}
 	substr[i] = '\0';
 	return (substr);

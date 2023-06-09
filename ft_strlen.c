@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sloke <sloke@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:40:46 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/03 11:57:57 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/07 10:57:51 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	ft_strlen(const char *c)
 {
 	unsigned int	pos;
 
-	pos = 1;
+	pos = 0;
 	while (c[pos])
 	{
 		pos++;

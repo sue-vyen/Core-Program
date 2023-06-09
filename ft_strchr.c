@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 13:52:01 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/29 11:31:32 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/07 11:19:05 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)str + pos);
 		pos++;
 	}
+	if (str[pos] == (unsigned char)c)
+		return ((char *)str + pos);
 	return (0);
 }
 

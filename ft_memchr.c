@@ -6,13 +6,13 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 11:43:05 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/14 12:39:50 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/07 10:56:52 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, unsigned int c, size_t n)
 {
 	size_t			pos;
 	unsigned char	*new_s;
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	new_s = (unsigned char *)s;
 	while (pos < n)
 	{
-		if (new_s[pos] == c)
+		if (new_s[pos] == (unsigned char) c)
 			return ((void *)s + pos);
 		pos++;
 	}

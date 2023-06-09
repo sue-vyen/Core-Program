@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:02:11 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/21 17:30:14 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/09 09:56:23 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,24 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dstlen;
 	size_t	srcpos;
+	size_t	srclen;
 
+	if (dst == NULL && src == NULL)
+		return (0);
 	srcpos = 0;
+	srclen = ft_strlen(src);
+	if (dstsize == 0)
+		return (srclen);
 	dstlen = ft_strlen(dst);
 	if (dstsize < dstlen + 1)
-		return (dstsize + ft_strlen(src));
+		return (dstsize + srclen);
 	while (srcpos < (dstsize - dstlen - 1) && src[srcpos])
 	{
 		dst[srcpos + dstlen] = src[srcpos];
 		++srcpos;
 	}
 	dst[srcpos + dstlen] = '\0';
-	return (dstlen + ft_strlen(src));
+	return (dstlen + srclen);
 }
 
 // int	main()

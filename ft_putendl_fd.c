@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:13:42 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/06 10:16:37 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/09 09:47:54 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	ft_putendl_fd(char *s, int fd)
 		return ;
 	while (s[i])
 		write (fd, &s[i++], 1);
-	write (1, "\n", 1);
+	write (fd, "\n", 1);
 }

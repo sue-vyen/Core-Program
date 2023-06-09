@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 10:37:03 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/23 14:40:13 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/07 17:27:17 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void	*ft_calloc(size_t num_elements, size_t element_size)
 	rtn = malloc(element_size * num_elements);
 	if (!rtn)
 		return (NULL);
-	ft_bzero (rtn, num_elements);
+	else
+		ft_memset(rtn, 0, num_elements * element_size);
 	return (rtn);
 }
 

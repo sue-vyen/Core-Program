@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 11:14:11 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/19 15:43:48 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/07 11:25:43 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 		j++;
 	}
+	dst[j] = '\0';
 	return (ft_strlen(src));
 }
 

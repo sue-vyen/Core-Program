@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 14:27:44 by sloke             #+#    #+#             */
-/*   Updated: 2023/05/19 11:06:45 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/09 10:10:19 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	y = 0;
 	if (*needle == '\0')
 		return ((char *)haystack);
+	if ((haystack == NULL && needle == NULL) || n == 0)
+		return (NULL);
 	while (haystack[x] && x < n)
 	{
 		if (haystack[x] == needle[y])
