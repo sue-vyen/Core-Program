@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 14:27:44 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/09 10:10:19 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/09 14:59:42 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,20 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
-	size_t	x;
-	size_t	y;
+	size_t	needle_len;
 
-	x = 0;
-	y = 0;
+	needle_len = ft_strlen(needle);
 	if (*needle == '\0')
 		return ((char *)haystack);
 	if ((haystack == NULL && needle == NULL) || n == 0)
 		return (NULL);
-	while (haystack[x] && x < n)
+	while (*haystack != '\0' && n-- >= needle_len)
 	{
-		if (haystack[x] == needle[y])
-		{
-			while (haystack[x + y] == needle[y] && (x + y) < n)
-			{
-				y++;
-				if (needle[y] == '\0')
-					return ((char *)&haystack[x]);
-			}
-		}
-		x++;
+		if (ft_strncmp(haystack, needle, needle_len) == 0)
+			return ((char *)haystack);
+		haystack++;
 	}
-	return (0);
+	return (NULL);
 }
 
 // int	main()

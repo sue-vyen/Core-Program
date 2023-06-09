@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 10:37:03 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/07 17:27:17 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/09 11:27:57 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t num_elements, size_t element_size)
 {
 	void	*rtn;
 
+	if (num_elements == SIZE_MAX || element_size == SIZE_MAX)
+		return (NULL);
 	rtn = malloc(element_size * num_elements);
 	if (!rtn)
 		return (NULL);

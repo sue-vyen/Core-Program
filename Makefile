@@ -6,7 +6,7 @@
 #    By: sloke <sloke@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/29 14:51:08 by sloke             #+#    #+#              #
-#    Updated: 2023/06/07 09:59:54 by sloke            ###   ########.fr        #
+#    Updated: 2023/06/09 14:08:30 by sloke            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,4 +49,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re        
+.PHONY: all clean fclean re bonus

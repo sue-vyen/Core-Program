@@ -6,11 +6,12 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 15:52:18 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/09 09:46:06 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/09 14:46:08 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -32,11 +33,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main(void)
 // {
-// 	char	*str = "the from the beginning and the end of the string the";
-// 	char	*trim = "the";
-// 	char	*result = ft_strtrim(str, trim);
+// // 	// char	*str = "the from the beginning and the end of the string the";
+// // 	// char	*trim = "the";
+// // 	char	*result = ft_strtrim("abcdba", "abc");
 
-// 	printf("%s\n", result);
-// 	free(result);
+// // 	printf("%s\n", result);
+// // 	free(result);
+// // 	return (0);
+
+// 	char *test = ft_substr("0123456789", 9, 10);
+// 	printf("res2: %s\n", test);
+// 	free(test);
 // 	return (0);
 // }
